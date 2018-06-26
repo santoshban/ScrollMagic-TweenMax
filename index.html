@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron full-height">
+        <section id="start">
+            <div class="display-4">UI/UX Designer and Web Developer</div>
+            <div class="display-4">UI/UX Designer and Web Developer</div>
+            <div class="display-4">UI/UX Designer and Web Developer</div>
+            <div class="display-3" id="display-4"><span>UI/UX Designer</span> and Web Developer</div>
+            <div class="display-4">UI/UX Designer and Web Developer</div>
+            <div class="display-4">UI/UX Designer and Web Developer</div>
+            <img src="https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg" height="450px" alt="" id="photo">
+            <div id="my-name">Santosh Ban</div>
+        </section>
+    </div>
+
+    <script>
+        var controller = new ScrollMagic.Controller();
+
+        // Create a scene
+        new ScrollMagic.Scene({
+            duration: 100,
+            offset: 50
+        })
+        .setTween(
+            TweenMax.to("#start .display-3", 1, {backgroundPosition: "0 23px", repeat: 0, delay: 1, repeatDelay: 2, ease: Linear.easeNone}),
+            TweenMax.to("#start span", 1, {bottom: $(window).height(), left: "-=50", rotation: -20}),
+            TweenMax.from("#start span", 1, {scale: 0.2, top: "+=70"}),
+            TweenMax.to("#start span", 0.8, {top: -$(window).height()/3, left: 450, rotation: 30}),
+            TweenMax.to("#start span", 1, {autoAlpha: 0, repeat: -1, delay: 1, repeatDelay: 2, ease: Linear.easeNone}),
+            // TweenMax.to("#start", 2, {backgroundColor:"#ff0000", repeat:0, width:"50%", top:"100px", ease:Power2.easeInOut}),
+            TweenMax.to("#my-name", 1, {css:{marginTop:"100px", marginLeft:"50px", backgroundColor:"#ff0000", fontSize:"12px", transform:"scale(1.2,1.4)"}, delay:0.5, repeat: -1, repeatDelay: 2, ease: Linear.easeNone})
+
+
+
+        )
+        .addTo(controller);
+
+        var photo = document.getElementById("photo");
+        TweenMax.to(photo, 2, {width:"200px", height:"150px"});
+    </script>
+</body>
+</html>
