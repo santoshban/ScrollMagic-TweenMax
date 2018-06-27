@@ -17,8 +17,8 @@
 }
 
 .spider{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     margin-top: 100px;
 }
 
@@ -31,12 +31,54 @@
     background: #6DEDCA;
     border-radius: 4px;
     transform: rotate(45deg);
-    height: 200px;
-    width: 200px;
-    margin-top: 100px;
+    height: 100px;
+    width: 100px;
+    margin-top: 200px;
     position: absolute;
 }
 
 body{
     background: #eee;
+}
+
+.boxes{
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.boxe{
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+    background: greenyellow;
+    margin-right: 10px;
+    float: left;
+}
+
+.bg-grey{
+    background: #ddd;
+    padding-top: 60px;
+}
+
+.square{
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    clear: both;
+}
+
+.green{
+    background: green;
+}
+
+.orange{
+    background: orange;
+}
+
+.grey{
+    background: grey;
 }
