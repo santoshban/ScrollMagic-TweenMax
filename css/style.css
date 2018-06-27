@@ -82,3 +82,15 @@ body{
 .grey{
     background: grey;
 }
+
+.jumbotron{
+    margin-bottom: 0 !important;
+}
+
+.display-4{
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+/* Animations */
+
