@@ -15,3 +15,28 @@
     padding: 30px 0;
     background-size: cover;
 }
+
+.spider{
+    height: 300px;
+    width: 300px;
+    margin-top: 100px;
+}
+
+.bg-color{
+    background: #4721E8;
+    height: 100vh;
+}
+
+.box{
+    background: #6DEDCA;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+    position: absolute;
+}
+
+body{
+    background: #eee;
+}
